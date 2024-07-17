@@ -1,0 +1,47 @@
+.body {
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+.title {
+  color: blue;
+  align-items: flex-start;
+  font-size: 60px;
+  margin: 25px;
+  animation: animate_title 6s linear infinite;
+}
+
+.span {
+  background: url("https://cdn0.iconfinder.com/data/icons/twitter-24/512/166_Heart_Love_Like_Twitter-256.png");
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: animate_heart 6s linear;
+}
+
+@keyframes animate_heart {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0);
+  }
+
+  100% {
+    transform: translate(-50%, -5000%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
+}
+
+@keyframes animate_title {
+  0% {
+    opacity: 1;
+    filter: hue-rotate(720deg);
+  }
+}
